@@ -10,3 +10,11 @@
 - Usuario?
 - Likes?
 - Comentario?
+
+## Controlador de post
+
+- Crear el paquete y archivo de controlador
+- Crear objeto a exportar
+- Crear metodo create
+- Crear metodo findAll
+- Crear metodo findOneById
