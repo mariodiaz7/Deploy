@@ -1,20 +1,33 @@
 import SearchBar from "../searchBar/SearchBar";
 import FilterMenu from "../filterMenu/FilterMenu";
-import { Link } from "react-router-dom";
+import PupilajeAdd from "./pupilajeAdd/PupilajeAdd";
+import { Link, NavLink } from "react-router-dom";
+
 
 function Pupilajes() {
-    return (
-    <nav className="flex justify-center space-x-4 ">
-       <SearchBar/>
-       <FilterMenu/>
-       <Link>
-       <button
-          className=" mb-5 shadow appearance-none border rounded w-auto py-4 px-3 text-gray-100 bg-[#2F4D55] hover:bg-[#1F3A44]">
-          Publicar Anuncio
-        </button>
-       </Link>
-    </nav>
-    );
+   return (
+      <div>
+         <nav className="flex justify-center space-x-4 ">
+            <SearchBar />
+            <FilterMenu />
+            <Link>
+               <button
+                  className=" mb-5 shadow appearance-none border rounded w-auto py-4 px-3 text-gray-100 bg-[#2F4D55] hover:bg-[#1F3A44]">
+                  Publicar Anuncio
+               </button>
+            </Link>
+         </nav>
+
+         <div className="flex flex-col">
+            <div className="flex justify-between px-10">
+
+               <NavLink to="/pupilajeAddInfo">
+               <PupilajeAdd />
+               </NavLink>
+            </div>
+         </div>
+      </div>
+   );
 }
 
 export default Pupilajes;

@@ -7,6 +7,7 @@ import AddInfo from "./components/add/addInfo/AddInfo"
 import Marketplace from "./components/marketplace/Marketplace"
 import Pupilajes from "./components/pupilajes/Pupilajes"
 import Profile from "./components/profile/Profile"
+import pupilajeAddInfo from "./components/pupilajes/pupilajeAddInfo/pupilajeAddInfo"
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Marketplace" Component={Marketplace}/>
         <Route path="/Pupilajes" Component={Pupilajes} />
         <Route path="/Profile" Component={Profile} />
+        <Route path="/pupilajeAddInfo" Component={pupilajeAddInfo} />
       </Routes>
     </BrowserRouter>
     </>
