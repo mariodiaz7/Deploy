@@ -11,23 +11,45 @@ const PupilajeController = require("../controllers/post.controller");
 const ProductController = require("../controllers/post.controller");
 
 // Rutas para productos
-router.get("/products", ProductController.findAllProducts);
-router.get("/products/:identifier", idInParamsValidator,validateFields,ProductController.findOneProductById);
-router.post(
-  "/products",
+router.get("/", ProductController.findAllProducts);
+router.get("//:identifier", idInParamsValidator,validateFields,ProductController.findOneProductById);
+router.post(  ["/","/:identifier"],
   createProductValidator,
+  idInParamsValidator,
   validateFields,
-  ProductController.createProduct
+  ProductController.saveProduct
+);
+//eliminar
+router.delete(
+  "/:identifier",
+  idInParamsValidator,
+  validateFields,
+  ProductController.deleteProductById,
 );
 
+
 // Rutas para pupilajes
-router.get("/pupilajes", PupilajeController.findAllPupilajes);
-router.get("/pupilajes/:identifier",idInParamsValidator,validateFields,PupilajeController.finOnePupilajeById);
-router.post(
-  "/pupilajes",
-  createPupilajeValidator,
-  validateFields,
-  PupilajeController.createPupilaje
+router.get("/", PupilajeController.findAllPupilajes);
+
+router.get("/:identifier",
+idInParamsValidator,
+validateFields,
+PupilajeController.finOnePupilajeById
 );
+router.post(
+  ["/","/:identifier"],
+  createPupilajeValidator,
+  idInParamsValidator,
+  validateFields,
+  PupilajeController.savePupilaje
+);
+//eliminar
+router.delete(
+  "/:identifier",
+  idInParamsValidator,
+  validateFields,
+  PupilajeController.deletePupilajeById,
+);
+
 
 module.exports = router;
