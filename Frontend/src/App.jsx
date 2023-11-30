@@ -10,6 +10,7 @@ import Profile from "./components/profile/Profile"
 import pupilajeAddInfo from "./components/pupilajes/pupilajeAddInfo/pupilajeAddInfo"
 import CreateAddMarket from "./components/marketplace/createAddMarket/CreateAddMarket"
 import MyAdds from "./components/profile/myAdds/MyAdds"
+import MyHospedajes from "./components/profile/myHospedajes/MyHospedajes"
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/pupilajeAddInfo" Component={pupilajeAddInfo} />
         <Route path="/CreateAddMarket" Component={CreateAddMarket} />
         <Route path="/MyAdds" Component={MyAdds} />
+        <Route path="/MisHospedajes" Component={MyHospedajes} />
       </Routes>
     </BrowserRouter>
     </>
