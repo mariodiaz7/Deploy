@@ -11,6 +11,7 @@ import pupilajeAddInfo from "./components/pupilajes/pupilajeAddInfo/pupilajeAddI
 import CreateAddMarket from "./components/marketplace/createAddMarket/CreateAddMarket"
 import MyAdds from "./components/profile/myAdds/MyAdds"
 import MyHospedajes from "./components/profile/myHospedajes/MyHospedajes"
+import CreateAddPupilajes from "./components/pupilajes/CreateAddPupilajes/CreateAddPupilajes"
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/Profile" Component={Profile} />
         <Route path="/pupilajeAddInfo" Component={pupilajeAddInfo} />
         <Route path="/CreateAddMarket" Component={CreateAddMarket} />
+        <Route path="/CreateAddPupilajes" Component={CreateAddPupilajes} />
         <Route path="/MyAdds" Component={MyAdds} />
         <Route path="/MisHospedajes" Component={MyHospedajes} />
       </Routes>
