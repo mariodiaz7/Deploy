@@ -18,3 +18,13 @@
 - Crear metodo create
 - Crear metodo findAll
 - Crear metodo findOneById
+
+## Enrutador de Post
+
+- Crear paquete y archivo principal de rutas para la API
+- Creat enrutador de Post
+- Crear Rutas para
+  - Create
+  - Find All
+  - Find One By Id
+- Crear controlador finndOneById
