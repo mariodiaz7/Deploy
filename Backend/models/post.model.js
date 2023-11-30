@@ -1,26 +1,97 @@
 const Mongoose = require("mongoose");
 const Schema = Mongoose.Schema;
 
-const PostSchema = new Schema({
-    title: {
-      type: String,
-      trim: true,
-      required: true,
-    },
-    description: {
-      type: String,
-      trim: true,
-      required: true,
-    },
-    image: {
-      //URL de la imagen
-      type: String,
-      required: true,
-    },
-    hidden: {
+const ProductSchema = new Schema({
+  title: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  description: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+  hidden: {
+    type: Boolean,
+    default: false,
+  },
+  productState: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+
+  contact: {
+    type: String,
+    required: true,
+  },
+}, { timestamps: true });
+
+const PupilajeSchema = new Schema({
+  title: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  description: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+  hidden: {
+    type: Boolean,
+    default: false,
+  },
+  pupilajeState: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  contact: {
+    type: String,
+    required: true,
+  },
+
+  services: {
+    water: {
       type: Boolean,
       default: false,
     },
-  },  { timestamps: true });
+    electricity: {
+      type: Boolean,
+      default: false,
+    },
+    internet: {
+      type: Boolean,
+      default: false,
+    },
+  },
 
-module.exports = Mongoose.model("Post", PostSchema);
+  mapLink: {
+    type: String,
+    required: true,
+  },
+
+}, { timestamps: true });
+
+module.exports = {
+  Product: Mongoose.model("Product", ProductSchema),
+  Pupilaje: Mongoose.model("Pupilaje", PupilajeSchema),
+};
