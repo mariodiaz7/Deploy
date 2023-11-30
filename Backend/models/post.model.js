@@ -1,41 +1,6 @@
 const Mongoose = require("mongoose");
 const Schema = Mongoose.Schema;
 
-const ProductSchema = new Schema({
-  title: {
-    type: String,
-    trim: true,
-    required: true,
-  },
-  description: {
-    type: String,
-    trim: true,
-    required: true,
-  },
-  image: {
-    type: String,
-    required: true,
-  },
-  hidden: {
-    type: Boolean,
-    default: false,
-  },
-  productState: {
-    type: String,
-    trim: true,
-    required: true,
-  },
-  price: {
-    type: Number,
-    required: true,
-  },
-
-  contact: {
-    type: String,
-    required: true,
-  },
-}, { timestamps: true });
-
 const PupilajeSchema = new Schema({
   title: {
     type: String,
@@ -69,29 +34,60 @@ const PupilajeSchema = new Schema({
     required: true,
   },
 
-  services: {
+
     water: {
-      type: Boolean,
+      type: String,
       default: false,
     },
     electricity: {
-      type: Boolean,
+      type: String,
       default: false,
     },
     internet: {
-      type: Boolean,
+      type: String,
       default: false,
     },
-  },
+  
 
   mapLink: {
     type: String,
     required: true,
   },
+  
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+  comments: {
+    type: [
+      {
+        user: {
+          type: Schema.Types.ObjectId,
+          ref: "User",
+          required: true,
+        },
+        content: {
+          type: String,
+          required: true,
+        },
+        timestamp: {
+          type: Date,
+          required: true,
+        },
+        history: {
+          type: [String],
+          default: [],
+        },
+      },
+    ],
+    default: [],
+  },
+
+
 
 }, { timestamps: true });
 
-module.exports = {
-  Product: Mongoose.model("Product", ProductSchema),
-  Pupilaje: Mongoose.model("Pupilaje", PupilajeSchema),
-};
+
+
+module.exports = Mongoose.model("Pupilaje",PupilajeSchema);

@@ -19,17 +19,17 @@ validators.createPupilajeValidator = [
     body("image")
         .notEmpty()
         .withMessage("Image is required")
-        .isBase64()
-        .withMessage("Image must be a base64 encoded string"),
+        .isURL()
+        .withMessage("Image must be a base an URL"),
     body("pupilajeState").notEmpty().withMessage("Pupilaje state is required"),
     body("price").notEmpty().withMessage("Price is required").isNumeric().withMessage("Price must be a number"),
     body("contact")
         .notEmpty()
         .isURL()
         .withMessage("Contact is required"),
-    body("services.water").isBoolean().withMessage("Water service must be a boolean"),
-    body("services.electricity").isBoolean().withMessage("Electricity service must be a boolean"),
-    body("services.internet").isBoolean().withMessage("Internet service must be a boolean"),
+    body("water").notEmpty().withMessage("Serrvice-Water state is required"),
+    body("electricity").notEmpty().withMessage("Serrvice-electricity state is required"),
+    body("internet").notEmpty().withMessage("Serrvice-internet state is required"),
     body("mapLink")
         .notEmpty()
         .isURL()
@@ -57,18 +57,33 @@ validators.createProductValidator = [
     body("productState").notEmpty().withMessage("Product state is required"),
     body("price").notEmpty().withMessage("Price is required").isNumeric().withMessage("Price must be a number"),
     body("contact")
-        .notEmpty()
-        .isURL()
-        .withMessage("Contact is required")
+        .notEmpty().withMessage("Contact is required")
+        .isURL().withMessage("Contact must be a WhatsApp link")
+        
 ];
+
 
 validators.idInParamsValidator = [
     param("identifier")
         .notEmpty()
         .withMessage("Identifier is required")
-        .isMongoId()
-        .withMessage("Identifier must be a Mongo ID"),
+        // .isMongoId()
+        // .withMessage("Identifier must be a Mongo ID"),
 ];
+
+validators.saveCommentValidator = [
+    body("content")
+      .notEmpty()
+      .withMessage("Content is required")
+      .isLength({ max: 280 })
+      .withMessage("Content max lenght is 280 characters"),
+    body("_id")
+      .optional()
+      .notEmpty()
+      .withMessage("_id is required")
+      .isMongoId()
+      .withMessage("Identifier must be a Mongo ID"),
+  ];
 
 
 module.exports = validators;
