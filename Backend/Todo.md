@@ -36,3 +36,18 @@
 - Express validator
 - Reglas de EV
 - Middleware de EV
+
+## Implementacion de usuario
+
+- Modelo de usuario
+- Atributos
+- Manejo de password
+- Tools para el token
+- Registro e inicio de sesion
+- Rutas que requiren token - Middleware de token
+- Implementacion de roles
+- Completando la funcionalidad de Post
+  - Verificar en save y delete que el post sea del usuario
+  - Implementar toggle visibility
+  - Implementar like
+  - comentar
