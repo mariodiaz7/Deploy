@@ -1,4 +1,4 @@
-function CreateAddMarket() {
+function CreateAddPupilajes() {
     return (
         <div className="px-10 mx-10">
             <h3 className=" text-4xl font-medium text-[#1F3A44] mb-10 ">Crea tu anuncio</h3>
@@ -15,6 +15,23 @@ function CreateAddMarket() {
 
                     <input type="number" className="m-5 shadow appearance-none border border-gray-300 rounded  py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Precio" />
 
+                    <input
+                        type="text"
+                        className="m-5 shadow appearance-none border border-gray-300 rounded h-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        placeholder="Wifi (SI/NO)"
+                    />
+
+                    <input
+                        type="text"
+                        className="m-5 shadow appearance-none border border-gray-300 rounded h-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        placeholder="Luz (SI/NO)" />
+                    <input
+                        type="text"
+                        className="m-5 shadow appearance-none border border-gray-300 rounded h-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        placeholder="Agua (SI/NO)"
+                    />
+
+
                     <input type="url" className="m-5 shadow appearance-none border border-gray-300 rounded  py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Numero de telefono (URL Whatsapp)" />
 
                     <input type="text" className="m-5 shadow appearance-none border border-gray-300 rounded py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Estado del producto" />
@@ -26,4 +43,4 @@ function CreateAddMarket() {
 
     );
 }
-export default CreateAddMarket;
+export default CreateAddPupilajes;
