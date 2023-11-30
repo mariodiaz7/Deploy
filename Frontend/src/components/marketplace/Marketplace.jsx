@@ -7,7 +7,7 @@ function Marketplace() {
     <nav className="flex justify-center space-x-4 ">
        <SearchBar/>
        <FilterMenu/>
-       <Link>
+       <Link to="/CreateAddMarket">
        <button
           className=" mb-5 shadow appearance-none border rounded w-auto py-4 px-3 text-gray-100 bg-[#2F4D55] hover:bg-[#1F3A44]">
           Publicar Anuncio

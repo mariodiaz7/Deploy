@@ -8,6 +8,7 @@ import Marketplace from "./components/marketplace/Marketplace"
 import Pupilajes from "./components/pupilajes/Pupilajes"
 import Profile from "./components/profile/Profile"
 import pupilajeAddInfo from "./components/pupilajes/pupilajeAddInfo/pupilajeAddInfo"
+import CreateAddMarket from "./components/marketplace/createAddMarket/CreateAddMarket"
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/Pupilajes" Component={Pupilajes} />
         <Route path="/Profile" Component={Profile} />
         <Route path="/pupilajeAddInfo" Component={pupilajeAddInfo} />
+        <Route path="/CreateAddMarket" Component={CreateAddMarket} />
       </Routes>
     </BrowserRouter>
     </>
