@@ -28,3 +28,11 @@
   - Find All
   - Find One By Id
 - Crear controlador finndOneById
+
+## Validacion de rutas
+
+- Validacion manual
+  - Middleware ()=>{validar} ()=>{} ()=>{}
+- Express validator
+- Reglas de EV
+- Middleware de EV

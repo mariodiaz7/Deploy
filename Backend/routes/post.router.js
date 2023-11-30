@@ -1,15 +1,33 @@
 const express = require("express");
 const router = express.Router();
 
-const postController = require("../controllers/post.controller");
+const {
+  createProductValidator,
+  createPupilajeValidator,
+  idInParamsValidator
+} = require("../validators/post.validators");
+const validateFields = require("../validators/index.middleware");
+const PupilajeController = require("../controllers/post.controller");
+const ProductController = require("../controllers/post.controller");
 
-//// /api/post/...
+// Rutas para productos
+router.get("/products", ProductController.findAllProducts);
+router.get("/products/:identifier", idInParamsValidator,validateFields,ProductController.findOneProductById);
+router.post(
+  "/products",
+  createProductValidator,
+  validateFields,
+  ProductController.createProduct
+);
 
-router.get("/", postController.findAllProducts);
-router.get("/:identifier", postController.findOneProductById)
-router.get("/", postController.findAllPupilajes);
-router.get("/:identifier", postController.finOnePupilajeById);
-router.post("/", postController.createProduct);
-router.post("/", postController.createPupilaje);
+// Rutas para pupilajes
+router.get("/pupilajes", PupilajeController.findAllPupilajes);
+router.get("/pupilajes/:identifier",idInParamsValidator,validateFields,PupilajeController.finOnePupilajeById);
+router.post(
+  "/pupilajes",
+  createPupilajeValidator,
+  validateFields,
+  PupilajeController.createPupilaje
+);
 
 module.exports = router;

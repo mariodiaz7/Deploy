@@ -1,12 +1,14 @@
 const Product = require("../models/post.model");
 const Pupilaje = require("../models/post.model");
 
-
-const controller = {};
-
+const controller ={};
 controller.createProduct = async (req, res, next) => {
     try {
         const { title, description, image, productState, price, contact } = req.body;
+
+        if (!title || !description || !image || image.match()|| !productState || !price || !contact || contact.match()) {
+            return res.status(400);
+        } 
 
         const product = new Product({
             title: title,
@@ -62,8 +64,12 @@ controller.findAllProducts = async (req, res, next) => {
 // Controlador para crear un servicio de pupilaje
 controller.createPupilaje = async (req, res, next) => {
     try {
-        const { title, description, image, pupilajeState, price, contact, services, mapLink } = req.body;
 
+        
+        const { title, description, image, pupilajeState, price, contact, services, mapLink } = req.body;
+        if (!title || !description || !image || image.match()|| !pupilajeState || !price || !contact || contact.match() ||!service ||!mapLink|| mapLink.match()){
+            return res.status(400);
+        } 
         const pupilaje = new Pupilaje({
             title: title,
             description: description,
@@ -122,4 +128,3 @@ controller.finOnePupilajeById = async (req, res, next) => {
 }
 
 module.exports = controller;
-
