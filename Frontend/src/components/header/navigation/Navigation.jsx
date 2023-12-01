@@ -5,13 +5,13 @@ import useUser from '../../../hooks/useUser';
 
 function Navigation() {
 
- //const { isLogged, login } = useUSer();
- const {isLogged, logout} = useUser()  
- 
- const handleClic = e => {
-  e.preventDefault()
-  logout()
- }
+  //const { isLogged, login } = useUSer();
+  const { isLogged, logout } = useUser()
+
+  const handleClic = e => {
+    e.preventDefault()
+    logout()
+  }
   return (
 
     <nav>
@@ -24,8 +24,11 @@ function Navigation() {
               </li>
             </>
             : <>
-             <li>
+              <li>
                 <NavLink to="/Login" className="hover:underline" >Log In</NavLink>
+              </li>
+              <li>
+                <NavLink to="/Signin" className="hover:underline" >Sign In</NavLink>
               </li>
             </>
         }

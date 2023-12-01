@@ -1,21 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useUser from "../../../hooks/useUser";
+import Context from "../../../context/Usercontext";
+
 
 function Login() {
-  const [username, setIdentifier] = useState("");
+  const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const { login, isLogged } = useUser();
+  const { isLoginLoading, hasLoginError, login, isLogged } = useUser();
 
   useEffect(() => {
-    if (isLogged) navigate('/LandingPage');
+    console.log('UseEffect is triggered');
+    console.log('isLogged:', isLogged);
+    console.log('Navigate function:', navigate);
+    if (isLogged) navigate('/Homepage');
   }, [isLogged, navigate]);
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    login({username, password});
+    console.log('Submitting form...');
+    login({ identifier, password });
   };
+  
 
   return (
     <section className="flex justify-center items-center h-500">
@@ -24,7 +31,7 @@ function Login() {
           type="string"
           placeholder="Identifier"
           onChange={(e) => setIdentifier(e.target.value)}
-          value={username}
+          value={identifier}
           className="mb-5 shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
 
