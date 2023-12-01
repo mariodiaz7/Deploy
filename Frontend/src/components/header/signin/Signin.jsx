@@ -1,7 +1,7 @@
 function Signin() {
   return (
-    <section className="flex justify-center items-center h-screen">
-      <form className="bg-neutral-100 shadow-lg rounded px-8 pt-6 pb-8 mb-4 w-96">
+    <section className="flex justify-center items-center h-500">
+      <form className="bg-neutral-100 shadow-lg rounded px-8 sm:px-5 pt-6 sm:pt-3 pb-15 sm:pb-12 mb-4 sm:mb-0 w-96 sm:w-75">
 
         <input
           type="email"
