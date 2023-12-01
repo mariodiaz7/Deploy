@@ -7,7 +7,6 @@ function AddInfo() {
       <div className="md:pr-8">
         <h3 className="text-2xl md:text-3xl font-bold mb-2">Texas nspire cx ll CACHADA!</h3>
         <p className="text-gray-500 mb-2">Diego Calvo</p>
-        <p className="text-gray-500 mb-4">4.5/5</p>
         <img
           src={texasNspire}
           alt="Texas Nspire"

@@ -5,9 +5,11 @@ import Navigation from "./navigation/Navigation";
 import MobileMenu from "./MenuHamburger/MobileMenu";
 import { NavLink } from "react-router-dom";
 import ProfileHeader from "./navigation/profileHeader/ProfileHeader";
+import useUser from "../../hooks/useUser";
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isLogged } = useUser();
 
   const handleToggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -24,9 +26,11 @@ function Header() {
           <img alt="ADSS" src={adssLogo} className="w-20 h-auto" />
         </NavLink>
 
-        <div className="hidden md:flex lg:flex items-center justify-between px-9">
-          <Blocks />
-        </div>
+        {isLogged && (
+          <div className="hidden md:flex lg:flex items-center justify-between px-9">
+            <Blocks />
+          </div>
+        )}
 
         <div className="hidden md:flex lg:flex items-center md:items-center lg:items-center md:justify-between lg:justify-between md:px-9 lg:px-9">
           <div className="flex items-center">

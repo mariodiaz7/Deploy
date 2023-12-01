@@ -27,7 +27,7 @@ function Login() {
       <form onSubmit={handleSubmit} className="bg-neutral-100 shadow-lg rounded px-8 sm:px-5 pt-6 sm:pt-3 pb-15 sm:pb-12 mb-4 sm:mb-0 w-96 sm:w-75">
         <input
           type="string"
-          placeholder="Identifier"
+          placeholder="Username"
           onChange={(e) => setIdentifier(e.target.value)}
           value={identifier}
           className="mb-5 shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"

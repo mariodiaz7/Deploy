@@ -17,13 +17,7 @@ function Signin() {
 
         <input
           type="text"
-          placeholder="Name"
-          className="mb-5 shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        />
-
-        <input
-          type="text"
-          placeholder="Last name"
+          placeholder="UserName"
           className="mb-5 shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
 

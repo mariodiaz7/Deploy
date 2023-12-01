@@ -5,10 +5,9 @@ function PupilajeAddInfo() {
         <div className="flex flex-col mx-5 lg:mx-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:px-10">
                 <div>
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-2">Cachada pupilaje para la UCA</h3>
-                    <p className="text-gray-500 mb-2">Antiguo Cuscatlan</p>
-                    <p className="text-gray-500 mb-2">Diego Calvo</p>
-                    <p className="text-gray-500 mb-4">4.5/5</p>
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">Cachada pupilaje para la UCA</h3>
+                    <p className="text-gray-500 mb-4">Antiguo Cuscatlan</p>
+                    <p className="text-gray-500 mb-6">Diego Calvo</p>
                     <img
                         src={pupilajeFoto}
                         alt="Foto de pupilaje"
@@ -20,16 +19,16 @@ function PupilajeAddInfo() {
                     <p className="text-lg lg:text-xl font-bold">Precio: $180 / mes</p>
                     <p className="text-gray-700 mb-2">Meses a hospedarse: </p>
                     <p className="text-gray-700 mb-2">Publicado el: 08/10/2023</p>
-                    <p className="text-gray-700 mb-4">Total a pagar: $180</p>
+                    <p className="text-gray-700 mb-2">Total a pagar: $180</p>
                     <div className="bg-gray-200 p-4 rounded-md border border-gray-300 mb-4">
                         <p className="text-gray-700">
                             Pupilaje a dos cuadras de la Basílica de Guadalupe. Zona UCA. Incluye: servicios de Luz, agua, WiFi, sala, comedor y cocina (área común). Información. Tef. 2413-0807.
                         </p>
                     </div>
-                    <button className="bg-[#2F4D55] text-white py-3 px-4 rounded-md mb-2 hover:bg-[#1F3A44] focus:outline-none focus:shadow-outline">
+                    <button className="bg-[#2F4D55] text-white py-12 px-4 rounded-md mb-1 hover:bg-[#1F3A44] focus:outline-none focus:shadow-outline">
                         Contactar al vendedor
                     </button>
-                    <button className="bg-[#2F4D55] text-white py-3 px-4 rounded-md hover:bg-[#1F3A44] focus:outline-none focus:shadow-outline">
+                    <button className="bg-[#2F4D55] text-white py-12 px-4 rounded-md hover:bg-[#1F3A44] focus:outline-none focus:shadow-outline">
                         Reservar
                     </button>
                 </div>

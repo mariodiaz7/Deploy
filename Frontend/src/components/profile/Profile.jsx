@@ -11,7 +11,6 @@ function Profile() {
         <div className="flex flex-col justify-center text-center md:text-left">
           <p className="pb-3 md:pb-5 text-xl md:text-3xl font-bold text-[#2F4D55]">Nombre: Carlitos</p>
           <p className="pb-3 md:pb-5 text-xl md:text-3xl font-bold text-[#2F4D55]">Apellido: Canjura</p>
-          <p className="pb-3 md:pb-5 text-xl md:text-3xl font-bold text-[#2F4D55]">Calificación: 4.5/5</p>
           <p className="pb-3 md:pb-5 text-xl md:text-3xl font-bold text-[#2F4D55]">Email: papu777@uca.edu.sv</p>
           <p className="pb-3 md:pb-5 text-xl md:text-3xl font-bold text-[#2F4D55]">Contraseña: momosalvmamu</p>
         </div>
