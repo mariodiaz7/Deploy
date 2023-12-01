@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useUser from "../../../hooks/useUser";
-import Context from "../../../context/Usercontext";
-
 
 function Login() {
   const [identifier, setIdentifier] = useState("");
