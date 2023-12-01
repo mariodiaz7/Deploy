@@ -12,7 +12,7 @@ function Login() {
     console.log('UseEffect is triggered');
     console.log('isLogged:', isLogged);
     console.log('Navigate function:', navigate);
-    if (isLogged) navigate('/Homepage');
+    if (isLogged) navigate('/LandingPage');
   }, [isLogged, navigate]);
   
   const handleSubmit = (e) => {

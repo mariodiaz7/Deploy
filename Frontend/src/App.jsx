@@ -22,7 +22,7 @@ function App() {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/LandingPage" element={<LandingPage />} />
             <Route path="/Signin" element={<Signin />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/AddInfo" element={<AddInfo />} />
@@ -34,7 +34,7 @@ function App() {
             <Route path="/CreateAddPupilajes" element={<CreateAddPupilajes />} />
             <Route path="/MyAdds" element={<MyAdds />} />
             <Route path="/MisHospedajes" element={<MyHospedajes />} />
-            <Route path="/Homepage" element={<Homepage />} />
+            <Route path="/" element={<Homepage />} />
           </Routes>
         </BrowserRouter>
       </>
