@@ -1,6 +1,6 @@
 import pupilajeFoto from "../../../img/pupilaje.png";
 
-function pupilajeAddInfo() {
+function PupilajeAddInfo() {
     return (
         <div className="flex flex-col mx-5 lg:mx-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:px-10">
@@ -84,4 +84,4 @@ function pupilajeAddInfo() {
     );
 }
 
-export default pupilajeAddInfo;
+export default PupilajeAddInfo;

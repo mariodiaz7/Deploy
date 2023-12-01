@@ -7,7 +7,7 @@ import AddInfo from "./components/add/addInfo/AddInfo";
 import Marketplace from "./components/marketplace/Marketplace";
 import Pupilajes from "./components/pupilajes/Pupilajes";
 import Profile from "./components/profile/Profile";
-import pupilajeAddInfo from "./components/pupilajes/pupilajeAddInfo/pupilajeAddInfo";
+import PupilajeAddInfo from "./components/pupilajes/pupilajeAddInfo/PupilajeAddInfo";
 import CreateAddMarket from "./components/marketplace/createAddMarket/CreateAddMarket";
 import MyAdds from "./components/profile/myAdds/MyAdds";
 import MyHospedajes from "./components/profile/myHospedajes/MyHospedajes";
@@ -29,7 +29,7 @@ function App() {
             <Route path="/Marketplace" element={<Marketplace />} />
             <Route path="/Pupilajes" element={<Pupilajes />} />
             <Route path="/Profile" element={<Profile />} />
-            <Route path="/pupilajeAddInfo" element={<pupilajeAddInfo />} />
+            <Route path="/PupilajeAddInfo" element={<PupilajeAddInfo />} />
             <Route path="/CreateAddMarket" element={<CreateAddMarket />} />
             <Route path="/CreateAddPupilajes" element={<CreateAddPupilajes />} />
             <Route path="/MyAdds" element={<MyAdds />} />

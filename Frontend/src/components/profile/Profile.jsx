@@ -1,4 +1,4 @@
-import ProfilePhoto from "../../img/cricri.png";
+import ProfilePhoto from "../../img/3682281.png";
 
 function Profile() {
   return (
