@@ -12,7 +12,7 @@ function Homepage() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        {/* Add more content as needed */}
+        {/* Add more content as needed of course*/}
       </div>
     </div>
   );
