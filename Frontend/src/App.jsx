@@ -12,11 +12,14 @@ import CreateAddMarket from "./components/marketplace/createAddMarket/CreateAddM
 import MyAdds from "./components/profile/myAdds/MyAdds"
 import MyHospedajes from "./components/profile/myHospedajes/MyHospedajes"
 import CreateAddPupilajes from "./components/pupilajes/CreateAddPupilajes/CreateAddPupilajes"
+import { UserContextProvider } from "./context/Usercontext"
 
 function App() {
 
   return (
+    <UserContextProvider>
     <>
+  
     <BrowserRouter>
       <Header />
       <Routes>
@@ -29,12 +32,14 @@ function App() {
         <Route path="/Profile" Component={Profile} />
         <Route path="/pupilajeAddInfo" Component={pupilajeAddInfo} />
         <Route path="/CreateAddMarket" Component={CreateAddMarket} />
-        <Route path="/CreateAddPupilajes" Component={CreateAddPupilajes} />
+        <Route path="/CreateAddPupilajes" Component={CreateAddPupilajes}/>
         <Route path="/MyAdds" Component={MyAdds} />
         <Route path="/MisHospedajes" Component={MyHospedajes} />
       </Routes>
     </BrowserRouter>
+    
     </>
+    </UserContextProvider>
   )
 }
 

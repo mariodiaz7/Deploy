@@ -22,11 +22,6 @@ function ProfilePopup() {
           Mis hospedajes
         </NavLink>
       </li>
-      <li className="py-2 px-4 hover:bg-gray-100">
-        <NavLink to="/" className="text-gray-700">
-          Cerrar sesión
-        </NavLink>
-      </li>
     </ul>
   );
 }
