@@ -19,11 +19,10 @@ function CreateAddMarket() {
 
     try {
       await createProduct(productData, jwt);
-      console.log('Producto creado correctamente'); // Muestra mensaje en la consola
-      // Puedes realizar acciones adicionales después de crear el producto, si es necesario
+      console.log('Producto creado correctamente');
+
     } catch (error) {
       console.error('Error al crear el producto:', error.message);
-      // Puedes mostrar el mensaje de error al usuario, por ejemplo:
       alert(`Error al crear el producto: ${error.message}`);
     }
   };
@@ -35,14 +34,7 @@ function CreateAddMarket() {
     });
   };
 
-  const handleImageChange = (e) => {
-    // Aquí puedes manejar la carga de imágenes según tus necesidades
-    const files = e.target.files;
-    setProductData({
-      ...productData,
-      image: files,
-    });
-  };
+
 
   return (
     <div className="px-4 lg:px-10">
