@@ -10,13 +10,11 @@ function Marketplace() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await getProducts();
-        console.log('Datos de productos recibidos:', response);
+        const productsData = await getProducts();
 
-        if (response.product && Array.isArray(response.product)) {
-          setProducts(response.product);
+        if (productsData.product && Array.isArray(productsData.product)) {
+          setProducts(productsData.product);
           setLoading(false);
-          console.log('Estado de productos después de actualizar:', products);
         } else {
           setError('La propiedad "product" no es un array o está vacía');
           console.error('Error al obtener los productos: La propiedad "product" no es un array o está vacía');
@@ -47,16 +45,17 @@ function Marketplace() {
           </button>
         </Link>
       </nav>
-    <div className="flex flex-wrap-reverse justify-center">
-      {products.map((product) => (
-        <div key={product._id} className="m-4 p-4 border border-gray-300 rounded">
-          <p className="text-lg font-bold">{product.title}</p>
-          <p className="text-gray-700">Precio: ${product.price}</p>
-        </div>
-      ))}
+
+      <div className="flex flex-wrap justify-center">
+        {products.map((product) => (
+          <Link key={product._id} to={`/product/${product._id}`} className="m-4 p-4 border border-gray-300 rounded">
+            <p className="text-lg font-bold">{product.title}</p>
+            <p className="text-gray-700">Precio: ${product.price}</p>
+          </Link>
+        ))}
+      </div>
     </div>
-  </div>
-);
-      }
+  );
+}
 
 export default Marketplace;

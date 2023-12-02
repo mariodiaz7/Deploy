@@ -14,6 +14,7 @@ import MyHospedajes from "./components/profile/myHospedajes/MyHospedajes";
 import CreateAddPupilajes from "./components/pupilajes/CreateAddPupilajes/CreateAddPupilajes";
 import { UserContextProvider } from "./context/Usercontext";
 import Homepage from "./components/homepage/homepage";
+import ProductDetail from "./components/productview/productview"
 
 function App() {
   return (
@@ -35,6 +36,8 @@ function App() {
             <Route path="/MyAdds" element={<MyAdds />} />
             <Route path="/MisHospedajes" element={<MyHospedajes />} />
             <Route path="/" element={<Homepage />} />
+            <Route path="/product/:productId" element={<ProductDetail />} />
+
           </Routes>
         </BrowserRouter>
       </>
