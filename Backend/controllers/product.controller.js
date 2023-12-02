@@ -213,7 +213,7 @@ controller.findOneProductById = async (req, res, next) => {
 
 controller.findAllProducts = async (req, res, next) => {
     try {
-        const product = await Product.findOne({ hidden: false })
+        const product = await Product.find({ hidden: false })
             .populate("user", "username email _id")
             .populate("comments.user", "username email");
 
