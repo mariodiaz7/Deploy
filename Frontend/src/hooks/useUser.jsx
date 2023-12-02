@@ -1,4 +1,3 @@
-// useUser.js
 import { useCallback, useContext, useState } from "react";
 import Context from "../context/Usercontext";
 import loginService from '../services/login'

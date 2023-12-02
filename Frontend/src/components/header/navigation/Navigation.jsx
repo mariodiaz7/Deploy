@@ -8,7 +8,7 @@ function Navigation() {
   //const { isLogged, login } = useUSer();
   const { isLogged, logout } = useUser()
 
-  const handleClic = e => {
+  const handleClick= e => {
     e.preventDefault()
     logout()
   }

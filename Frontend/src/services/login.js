@@ -1,5 +1,4 @@
 //const ENDPOINT = 'http://localhost:3501/api'
-// loginService.js
 
 function login({ identifier, password }) {
   console.log('Submitting login form...');
@@ -19,9 +18,9 @@ function login({ identifier, password }) {
   })
   .then(res => {
     console.log('Received response:', res);
-    const { token } = res; // Change 'jwt' to 'token'
+    const { token } = res;
     console.log('Received JWT:', token);
-    return token; // Return the token
+    return token; 
 })
   .catch(error => {
       console.error('Login error:', error.message);
