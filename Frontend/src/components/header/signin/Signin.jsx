@@ -8,10 +8,12 @@ function Signin() {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [message, setMessage] = useState("");
+  const [isMessageVisible, setIsMessageVisible] = useState("");
   const navigate = useNavigate();
   const { isLogged, login } = useUser();
 
   useEffect(() => {
+
     if (isLogged) {
       navigate('/Login');
       showMessage("Usuario registrado");
@@ -32,6 +34,16 @@ function Signin() {
     } catch (error) {
       console.error("Error during sign in:", error);
     }
+  };
+
+  const showMessage = (text) => {
+    setMessage(text);
+    setIsMessageVisible(true);
+
+    setTimeout(() => {
+      setIsMessageVisible(false);
+      setMessage("");
+    }, 3000);
   };
 
   return (
@@ -71,6 +83,12 @@ function Signin() {
         >
           Sign In
         </button>
+
+        {isMessageVisible && (
+          <div className="bg-green-200 text-green-800 p-3 rounded mt-2">
+            {message}
+          </div>
+        )}
       </form>
     </section>
   );
