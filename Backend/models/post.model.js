@@ -33,22 +33,19 @@ const PupilajeSchema = new Schema({
     type: String,
     required: true,
   },
-
-
-    water: {
+  water: {
       type: String,
-      default: false,
+      
     },
     electricity: {
       type: String,
-      default: false,
+      
     },
     internet: {
       type: String,
-      default: false,
+    
     },
   
-
   mapLink: {
     type: String,
     required: true,
