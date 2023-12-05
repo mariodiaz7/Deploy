@@ -6,7 +6,7 @@ const createPost = async (postData, jwt) => {
     }
   
     try {
-      const response = await fetch(`${BaseURL}/post`, {
+      const response = await fetch(`${BaseURL}/api/post`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
