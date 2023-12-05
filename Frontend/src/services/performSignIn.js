@@ -3,7 +3,7 @@ const BaseURL= import.meta.env.VITE_API_URL;
 function performSignIn({ email, password, username }) {
     console.log('Submitting sign-in form...');
   
-    return fetch(`${BaseURL}/api/auth/register`, {
+    return fetch(`${BaseURL}/auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
