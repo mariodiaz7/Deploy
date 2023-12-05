@@ -2,7 +2,7 @@ const BaseURL= import.meta.env.VITE_API_URL;
 
 function login({ identifier, password }) {
   console.log('Submitting login form...');
-  return fetch(`${BaseURL}/api/auth/login`, {
+  return fetch(`${BaseURL}/auth/login`, {
       method: "POST",
       headers: {
           "Content-Type": "application/json"
