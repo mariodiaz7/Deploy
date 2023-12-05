@@ -3,7 +3,7 @@ const BaseURL= import.meta.env.VITE_API_URL;
 
 const getProducts = async () => {
     try {
-      const response = await fetch(`${BaseURL}/product`);
+      const response = await fetch(`${BaseURL}/api/product`);
       
       if (!response.ok) {
         const errorResponse = await response.json();
