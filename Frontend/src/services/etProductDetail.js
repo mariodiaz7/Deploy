@@ -6,7 +6,7 @@ const getProductDetail = async (productId, jwt) => {
         throw new Error("No hay un token JWT válido");
       }
   
-      const response = await fetch(`${BaseURL}/product/${productId}`, {
+      const response = await fetch(`${BaseURL}/api/product/${productId}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
