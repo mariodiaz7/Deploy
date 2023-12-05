@@ -7,7 +7,7 @@ const createProduct = async (productData, jwt) => {
     }
 
     try {
-        const response = await fetch(`${BaseURL}/product`, {
+        const response = await fetch(`${BaseURL}/api/product`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
