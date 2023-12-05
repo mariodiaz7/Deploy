@@ -1,3 +1,5 @@
+const BaseURL= import.meta.env.VITE_API_URL;
+
 import React, { useState, useEffect, useContext } from 'react';
 import Context from '../context/Usercontext';
 
@@ -7,7 +9,7 @@ const profileFetch = () => {
 
   useEffect(() => {
     if (jwt) {
-      fetch('http://localhost:3501/api/auth/whoami', {
+      fetch(`${BaseURL}/auth/whoami`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${jwt}`,

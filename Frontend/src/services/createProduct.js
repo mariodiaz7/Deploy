@@ -1,10 +1,13 @@
+const BaseURL= import.meta.env.VITE_API_URL;
+
+
 const createProduct = async (productData, jwt) => {
     if (!jwt) {
         throw new Error("No hay un token JWT válido");
     }
 
     try {
-        const response = await fetch("http://localhost:3501/api/product", {
+        const response = await fetch(`${BaseURL}/product`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
