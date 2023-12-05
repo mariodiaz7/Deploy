@@ -9,7 +9,7 @@ const profileFetch = () => {
 
   useEffect(() => {
     if (jwt) {
-      fetch(`${BaseURL}/auth/whoami`, {
+      fetch(`${BaseURL}/api/auth/whoami`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${jwt}`,
